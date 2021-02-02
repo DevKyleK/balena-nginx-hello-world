@@ -1,7 +1,5 @@
 version: '2'
 services:
-  env:
-    TOKEN: NjI3NjY4MDEzMjcyNzkzMDg4.XY__Yw.y2xf9fy1K4rz_7br34n4tQ6CwV0
   frontend:
     build: ./frontend
     ports:
