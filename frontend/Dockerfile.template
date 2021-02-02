@@ -3,9 +3,8 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:stretch-run
 # Defines our working directory in container
 WORKDIR /usr/src/app
 
-RUN install_packages wget nginx nginx-light
+RUN "npm install discord.js"
 
-COPY static /var/www/html/static
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY bot.js /usr/src/app
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "bot.js"]
